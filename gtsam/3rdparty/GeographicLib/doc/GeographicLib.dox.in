@@ -873,7 +873,7 @@ print out \verbatim
 Here is a complete CMakeList.txt files you can use to build this test
 code using the installed library: \verbatim
 project (geodesictest)
-cmake_minimum_required (VERSION 2.8.4)
+cmake_minimum_required(VERSION 3.14)
 
 find_package (GeographicLib 1.34 REQUIRED)
 

@@ -2,8 +2,7 @@
 name: Trigger Python Builds
 on:
   push:
-    branches:
-      - develop
+  
 jobs:
   triggerPython:
     runs-on: ubuntu-latest

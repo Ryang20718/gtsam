@@ -1,6 +1,6 @@
 project (GeographicLib-C C)
 
-cmake_minimum_required (VERSION 2.8.4)
+cmake_minimum_required(VERSION 3.14)
 
 # Set a default build type for single-configuration cmake generators if
 # no build type is set.
