@@ -83,15 +83,17 @@ cmake $PROJECT_DIR \
     -DGTWRAP_ADD_DOCSTRINGS=ON
 
 # Generate Doxygen XML documentation
-doxygen build/doc/Doxyfile
+# doxygen build/doc/Doxyfile
 
 # Install the Python wrapper module and generate Python stubs
 cd $PROJECT_DIR/build/python
 if [ "$(uname)" == "Linux" ]; then
     make -j $(nproc) install
     make -j $(nproc) python-install
-    cd python/
-    python setup.py bdist_wheel
+    ls -a
+    # python setup.py bdist_wheel
+    # find $PROJECT_DIR -name "*.whl"
+    # find $PROJECT_DIR -name "*.whl" -exec cp {} /tmp/ \;
 elif [ "$(uname)" == "Darwin" ]; then
     make -j $(sysctl -n hw.logicalcpu) install
     make -j $(sysctl -n hw.logicalcpu) python-stubs
